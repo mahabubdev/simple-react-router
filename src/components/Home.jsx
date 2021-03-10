@@ -22,10 +22,11 @@ const Homepage = () => {
                     teams: data.teams,
                     loaded: true
                 })
+                // setState()
             })
         }
         fetchTeams();
-    }, [])
+    })
 
     return (
         <div className="wrapper">

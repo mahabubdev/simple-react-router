@@ -13,8 +13,9 @@
 ## some instruction
 ### `yarn install`  : Install all node_modules dependency
 ### `yarn start`    : Start development server in your local computer (on port 3000 by default)
-### `yarn build`    : Create optimized production ready app
 ### `yarn test`     : Test your application as you want
+### `yarn build`    : Create optimized production ready app
+
 
 ## Deployed in Netlify
 <a href="#" target="_blank">Visit & See Preview</a>

@@ -27,8 +27,8 @@ const TeamDetail = () => {
     useEffect(() => {
             fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`)
             .then(response => response.json())
-            .then(thisdt => {
-                let infoData = thisdt.teams[0];
+            .then(data => {
+                let infoData = data.teams[0];
                 // console.log(infoData)
                 setTeam({
                     ...team,
@@ -45,7 +45,7 @@ const TeamDetail = () => {
                 })
             })
         
-    }, [teamId])
+    })
 
     return (
         <>
