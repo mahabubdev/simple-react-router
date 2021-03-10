@@ -1,0 +1,603 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #33313a;
+    background-color: #f0f0f7;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #33313a;
+    font-weight: 600;
+}
+h1, h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+a {
+    text-decoration: none;
+    transition: all .25s;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+}
+p {
+    line-height: 1.1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/*=== OWN CSS ===*/
+.flx {
+    display: flex;
+}
+.flx-inline {
+    display: inline-flex;
+}
+.flx-center {
+    justify-content: center;
+    align-items: center;
+}
+.flx-center-x {
+    justify-content: center;
+}
+.flx-center-y {
+    align-items: center;
+}
+.flx-dir-col {
+    flex-direction: column;
+}
+.flx-item-between {
+    justify-content: space-between;
+}
+
+
+.grd {
+    display: grid;
+}
+.grd-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grd-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grd-col-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.gap-1 {
+    gap: 10px;
+}
+.gap-2 {
+    gap: 1rem;
+}
+.gap-3 {
+    gap: 1.5rem;
+}
+.gap-1-x {
+    gap: 10px 0;
+}
+.gap-1-y {
+    gap: 0 10px;
+}
+.gap-2-x {
+    gap: 1rem 0;
+}
+.gap-2-y {
+    gap: 0 1rem;
+}
+.gap-3-x {
+    gap: 1.5rem 0;
+}
+.gap-3-y {
+    gap: 0 1.5rem;
+}
+.pd {
+    padding: .5rem;
+}
+.pd-1 {
+    padding: 10px;
+}
+.pd-2 {
+    padding: 1rem;
+}
+.pd-3 {
+    padding: 1.5rem;
+}
+.pd-x {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+.pd-1-x {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.pd-1-y {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pd-2-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.pd-2-y {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.pd-3-x {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.pd-3-y {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.pd-4-x {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.pd-4-y {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.pd-5-x {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.pd-5-y {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.bg-white {
+    background-color: #f0f0f7;
+}
+.bg-fff {
+    background-color: #FFFFFF;
+}
+.bg-indigo {
+    background-color: indigo;
+}
+.bg-blue {
+    background-color: blue;
+}
+.bg-indigo-x {
+    background-color: #571ac9;
+}
+.bg-blue-x {
+    background-color: #4869FA;
+}
+.bg-redish {
+    background-color: #F24A56;
+}
+.bg-redish-x {
+    background-color: #ec4e59;
+}
+.bg-darkish {
+    background-color: #33313a;
+}
+.bg-dark-theme {
+    background-color: #0F0C2A;
+}
+.bg-fb {
+    background-color: #3B5998;
+}
+.bg-twt {
+    background-color: #1DA1F2;
+}
+.bg-ytb {
+    background-color: #F24423;
+}
+
+
+.txt-white {
+    color: #FFFFFF;
+}
+.txt-blue {
+    color: #3342cc;
+}
+.txt-indigo {
+    color: #571ac9;
+}
+.txt-redish {
+    color: #F24A56;
+}
+.txt-darkish {
+    color: #33313a;
+}
+
+.bdr-x {
+    border-radius: 1.125rem;
+    -webkit-border-radius: 1.125rem;
+    -moz-border-radius: 1.125rem;
+    -ms-border-radius: 1.125rem;
+    -o-border-radius: 1.125rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+
+    span {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        animation: loadingspin 1s infinite;
+        -webkit-animation: loadingspin 1s infinite;
+    }
+}
+
+.teams .loading {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+@keyframes loadingspin {
+    from {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+.card {
+    box-shadow: 0 .125rem .5rem 0 rgba(0,0,0, 0.3);
+    border-radius: .35rem;
+    transition: all .25s;
+    min-height: 300px;
+    cursor: pointer;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    -webkit-border-radius: .35rem;
+    -moz-border-radius: .35rem;
+    -ms-border-radius: .35rem;
+    -o-border-radius: .35rem;
+}
+.card-on-dark {
+    box-shadow: 0 .125rem .5rem 0 rgba(242, 74, 86, 1);
+}
+.card img {
+    width: 70%;
+}
+
+.circle {
+    clip-path: circle(50%);
+}
+
+.font-h {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.font-mid {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.font-large {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.font-larger {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.font-xl {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+
+.wrapper {
+    background-color: #33313a;
+    color: #FFFFFF;
+    min-height: 100vh;
+}
+
+.header_area {
+    position: relative;
+    background-image: url("./images/banner_bg.jpg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 320px;
+    z-index: 1;
+    // after
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        clear: both;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.4);
+        z-index: -1;
+    }
+}
+.header_area h1,
+.header_area h2 {
+    color: #FFFFFF;
+}
+
+.m {
+    margin: 10px;
+}
+.mx {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.my {
+    margin-top: 10px;
+    margin-bottom: 10px;
+} 
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+} 
+.mx-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+} 
+
+
+.btn-explr {
+
+    &:hover {
+        justify-content: space-between;
+        gap: 0 1.5rem;
+        transition: .3s;
+        -webkit-transition: .3s;
+        -moz-transition: .3s;
+        -ms-transition: .3s;
+        -o-transition: .3s;
+}
+
+    display: flex;
+    padding: 1rem 2.2rem;
+    gap: 0 .5rem;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: .85rem 0 0;
+    border-radius: .5rem;
+    transition: .25s;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.hidden {
+    display: none;
+}
+
+.header_img {
+    max-width: 200px;
+    height: auto;
+    padding: 2rem 0;
+}
+
+
+// home
+.teams {
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+// team-details
+.team_details {
+    background-color: #0F0C2A;
+    min-height: 55vh;
+    padding-top: 2rem;
+}
+
+.team_detail_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+    width: 85%;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+.team_detail_card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail_error {
+    padding-top: 2rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1,h2 {
+        color: #F24A56;
+    }
+}
+
+.detail_left {
+    width: auto;
+    justify-content: flex-start;
+    gap: 1rem 0;
+
+    h3 {
+        font-size: 2.5rem;
+    }
+    p {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0 .35rem;
+        font-size: 1.25rem;
+        margin: .6rem 0;
+    }
+}
+
+.detail_right {
+    img {
+        max-height: 300px;
+        width: auto;
+    }
+}
+
+.team_desc {
+    font-size: 1.25rem;
+    line-height: 3rem;
+    font-weight: 400;
+}
+
+.social_links {
+    margin-top: 1.5rem;
+    padding: 1rem 0 2rem;
+    gap: 0 1rem;
+    padding-left: 0;
+
+    li {
+        list-style: none;
+
+        a {
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            clip-path: circle(50%);
+            cursor: pointer;
+        }
+    }
+}
+
+
+/*=== RESPONSIVE CSS ===*/
+
+/**-------------------------*
+ * @Breakpoints
+ * PC: 1170px;
+ * TAB: 992px;
+ * TAB/Smartphone: 770px;
+ *-------------------------*/
+
+/*--- PC: 1170px ---*/
+@media (max-width: 1169.9px) {
+    .detail_left {
+        gap: .85rem 0;
+    
+        h3 {
+            font-size: 1.85rem;
+        }
+        p {
+            gap: 0 .3rem;
+            font-size: 1.15rem;
+        }
+    }
+
+    .card {
+        min-height: 250px;
+        padding: 1.5rem 2rem;
+    }
+}
+
+
+/*--- TAB: 992px ---*/
+@media (max-width: 991.9px) {
+    .card {
+        padding: .85rem 1.6rem;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+        h5 {
+            font-size: .85rem;
+        }
+    }
+    .detail_left {
+        gap: .7rem 0;
+    
+        h3 {
+            font-size: 1.3rem;
+        }
+        p {
+            gap: 0 .3rem;
+            font-size: .85rem;
+        }
+    }
+    .detail_right {
+        img {
+            max-height: 240px;
+            width: auto;
+        }
+    }
+}
+
+/*--- TAB: 770px ---*/
+@media (max-width: 769.9px) {
+    .grd-col-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team_detail_card {
+        flex-direction: column;
+        gap: 1.2rem 0;
+        padding: .7rem;
+    }
+    .detail_right {
+        img {
+            max-height: inherit;
+            width: 100%;
+        }
+    }
+    .detail_left {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+/*--- TAB: 520px ---*/
+@media (max-width: 519.9px) {
+    .grd-col-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
